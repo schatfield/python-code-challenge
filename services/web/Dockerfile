@@ -21,4 +21,4 @@ COPY ./Users/shawnachatfield/workspace/python-code-challenge
 
 
 # run entrypoint.sh
-ENTRYPOINT ["/Users/shawnachatfield/workspace/python-code-challengeentrypoint.sh"]
+ENTRYPOINT ["/Users/shawnachatfield/workspace/python-code-challenge"]
