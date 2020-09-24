@@ -1,8 +1,8 @@
 # pull official base image
-FROM python:3.7-slim-buster
+FROM python:3.8.1-slim-buster
 
 # set work directory
-WORKDIR /Users/shawnachatfield/workspace/python-code-challenge
+WORKDIR /Users/shawnachatfield/workspace/python-code-challenge/services/web
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -17,8 +17,8 @@ COPY ./requirements.txt /Users/shawnachatfield/workspace/python-code-challenge/s
 RUN pip install -r requirements.txt
 
 # copy project
-COPY ./Users/shawnachatfield/workspace/python-code-challenge
+COPY . /Users/shawnachatfield/workspace/python-code-challenge/services/web
 
 
 # run entrypoint.sh
-ENTRYPOINT ["/Users/shawnachatfield/workspace/python-code-challenge"]
+ENTRYPOINT ["/Users/shawnachatfield/workspace/python-code-challenge/services/web/entrypoint.sh"]
